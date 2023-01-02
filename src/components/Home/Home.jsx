@@ -1,24 +1,28 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
+import { useNavigate  } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    // const handleClick = () => {
-    //     navigate('/insertData');
-    // };
+    const handleClickLogIn = () => {
+        navigate('/logIn');
+    };
 
-    // return (
-    //     <div id='Home' className='container-fluid img-fluid'>
-    //         test
-    //     </div>
-    // );
+    const handleClickSignUp = () => {
+        navigate('/signUp');
+    };
 
     return (
         <div id='Home' className='backgroundimg'>
             <div className='container'>
-                <h1>hello</h1>
+                <h1 className='text-center'>Welcome to Car Service Information</h1>
+                <div className='buttons-container'>
+                    <Button className='' onClick={handleClickLogIn}>Log In</Button>
+                    <Button className='' onClick={handleClickSignUp}>Sign Up</Button>
+                </div>
             </div>
         </div>
     );
